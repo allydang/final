@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}{% endblock %}
+
+</head>
+<body>
+{% block content %}
+    <div class="row">
+        <div class="col-4 offset-4 text-center">
+            <p></p>
+            <strong><h2>Error: </h2></strong>
+            <strong><h2>{{ error_msg }}</h2></strong>
+            <strong><h2>Try again.</h2></strong>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

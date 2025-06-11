@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Form</title>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <form action="/submit-page" method="POST">
+        <p></p>
+        <div class="row">
+            <div class="col-4 offset-5 text-left">
+                <h5>Address:</h5>
+                <p>
+                    <input type="text" id="address" name="address">
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-5 text-left">
+                <h5>Latitude:</h5>
+                <p>
+                    <input type="text" id="latitude" name="latitude">
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-5 text-left">
+                <h5>Longitude:</h5>
+                <p>
+                    <input type="text" id="longitude" name="longitude">
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-4 text-center">
+                <p>
+                    <input type="submit" value="Submit!">
+                </p>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+
+</body>
+</html>

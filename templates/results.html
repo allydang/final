@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<body>
+    <p></p>
+    <p></p>
+    <div class="col-4 offset-4 text-center">
+        <h3>Results for {{ address }}</h3>
+    </div>
+    </div>
+        <p></p>
+        <div class="d-flex justify-content-between px-5 text-center">
+            <div class="card custom-card" style="width: 15rem;">
+                <div class="card-body">
+                    <h5>Bike Score: {{ score_data.bike.score }} </h5>
+                    <strong><em>{{ score_data.bike.description }}</em></strong>
+
+                </div>
+            </div>
+
+            <div class="card custom-card" style="width: 15rem;">
+                <div class="card-body">
+                    <h5>Walk Score: {{ score_data.walkscore }} </h5>
+                    <strong><em>{{ score_data.description }}</strong></em>
+                </div>
+            </div>
+            <div class="card custom-card" style="width: 15rem;">
+                <div class="card-body">
+                    <h5>Transit Score: {{ score_data.transit.score }} </h5>
+                    <strong><em>{{ score_data.transit.description}}</em></strong>
+                    <p></p>
+                    - {{ score_data.transit.summary }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="row">
+        <div class="col-4 offset-4 text-center">
+            <div class="card recc-card">
+                <div class="card-body">
+                    {% if score_data.walkscore > score_data.bike.score and score_data.walkscore > score_data.transit.score %}
+                        <p><h3>Walking around this area is the best idea for this location!</h3></p>
+                        <p>Get more details about the scores here:</p>
+                        <a href="{{ score_data.ws_link }}" target="_blank">View on Walk Score</a>
+                    {% elif score_data.bike.score > score_data.walkscore and score_data.bike.score > score_data.transit.score %}
+                        <p>Get more details about the scores here:</p>
+                        <a href="{{ score_data.ws_link }}" target="_blank">View on Walk Score</a>
+                    {% elif score_data.transit.score > score_data.walkscore and score_data.transit.score > score_data.bike.score %}
+                        <p><h3>Using transit around this area is the best idea for this location!</h3></p>
+                        <p>Get more details about the scores here:</p>
+                        <a href="{{ score_data.ws_link }}" target="_blank">View on Walk Score</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+{% endblock %}

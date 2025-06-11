@@ -1,0 +1,28 @@
+- Used ai to help generate name:
+    - Prompt: Give me name suggestions for a program that uses the Walkscore API
+    and takes a users input to give them a recommendation for the area they inquire about.
+- How to call css in base:
+    - I was confued on how I would link my css style file into my base template.
+    - Prompt: How would I link a css file into a html file?
+- Used AI to figure out why my results page was not showing anything
+    - Prompt: Why is my program not showing anything after i click the submit button?
+    - Turns out my results.html file was in the wrong folder and insteadof it being in the
+    templates folder, it somehow ended up in the scratch folder!
+- Used AI to figure out how to change color of a card
+    - I did not know how to change the color of a bootstrap card
+    - Prompt: How would i change the color of a bootstrap card?
+- I could not figure out how to put the cards next to eachother
+    - Everything I was doing was causing the cards to be in odd places.
+    - Prompt: How would i make it so I have three boostrap cards that
+    are in the same row, but three different columns and they are evenly
+    spaced out?
+- Used AI for how to hyperlink a variable and open a link in a new tab
+    - I knew how to create a hyperlink in html, but want to know if the code
+    was different when the link is a variable. I also did not know how to have the
+    link open a new tab.
+    - Prompt: how would I make a variable that's a link, hyperlinked? for example, the ws_link. Also, I want it to open a new tab.
+- Used AI for how exactly the return statement should be for the /submit-page
+    - Prompt: How should my return statement look for the /submit-page so that it renders results from the dictionary?
+- Used AI to figure out what the best error condition to check for would be.
+    - For my program, what would be the best exception condition to check for?
+
